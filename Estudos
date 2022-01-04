@@ -103,3 +103,32 @@ WHERE ENDEREÇO LIKE 'OSCAR CURY%';
 SELECT NOME, SEXO, ENDEREÇO FROM CLIENTE
 WHERE ENDEREÇO LIKE '%CENTRO%';
 
+SELECT AUTOR, SEXO, UF FROM LIVROS
+WHERE SEXO = 'M' AND (UF = 'SP' OR UF = 'RJ');
+
+/* Operadores Lógicos 
+OR -> Para que a saída da QUERY seja verdadeira, basta que apenas uma condição seja verdadeira 
+AND -> Para que a saída seja verdadeira todas as condições precisam ser verdadeiras */
+
+/* OR = OU */
+
+SHOW DATABASES;
+
+USE PROJETO;
+
+SELECT * FROM CLIENTE;
+
+SELECT NOME, SEXO, ENDEREÇO FROM CLIENTE
+WHERE SEXO = 'M' OR ENDEREÇO LIKE '%RJ';
+
+SELECT NOME, SEXO, ENDEREÇO FROM CLIENTE
+WHERE SEXO = 'F' OR ENDEREÇO LIKE '%ESTACIO';
+
+/* AND = E */
+
+SELECT NOME, SEXO, ENDEREÇO FROM CLIENTE
+WHERE SEXO = 'M' AND ENDEREÇO LIKE '%RJ';
+
+SELECT NOME, SEXO, ENDEREÇO FROM CLIENTE
+WHERE SEXO = 'F' AND ENDEREÇO LIKE '%ESTACIO';
+
